@@ -1,0 +1,15 @@
+h1 {
+  font-weight: 500;
+  transition: font-size 0.3s ease-in-out;
+}
+
+h1:hover {
+  font-size: 35px;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 2px;
+  padding: 20px;
+}

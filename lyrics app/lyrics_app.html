@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyrics Search</title>
+    <style>
+      input[type="text"] {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+      }
+      .lyrics {
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="artist">Artist</label>
+      <input type="text" placeholder="Enter artist name" id="artist" />
+      <label for="title">Title of Song</label>
+      <input type="text" placeholder="Enter title of the song" id="title" />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="lyrics" id="lyrics"></div>
+
+    <script>
+      document
+        .getElementById("searchBtn")
+        .addEventListener("click", function () {
+          const artist = document.getElementById("artist").value;
+          const title = document.getElementById("title").value;
+          const lyrics = document.getElementById("lyrics");
+
+          if (!artist || !title) {
+            lyrics.innerText = "Please enter both artist and title!";
+            return;
+          }
+
+          lyrics.innerText = ""; // Clear previous lyrics
+
+          fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
+            .then((response) => response.json())
+            .then((data) => {
+              lyrics.innerText = data.lyrics;
+            })
+            .catch((error) => {
+              console.error("Error fetching lyrics:", error);
+              lyrics.innerText = "Lyrics not found!"; // Display error message
+            });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.contact {
+  background-color: rgb(17, 17, 17);
+  padding: 30px 80px;
+  border-radius: 0 0 15px 15px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #eee;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  gap: 3rem;
+}
+
+.contact-info p {
+  color: #eee;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transform: all 0.42s;
+}
+
+.fourth-info h5 {
+  color: #eee;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+
+.five {
+  margin: 168px 40px 40px 40px;
+}

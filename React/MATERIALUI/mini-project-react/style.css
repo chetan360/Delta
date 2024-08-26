@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background: url(https://i.pinimg.com/originals/f2/b3/0d/f2b30db3c8bc87486f5b452dd6e6d300.jpg) */
+  /* no-repeat; */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}

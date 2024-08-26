@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+}
+
+h3 {
+  display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px;
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 25px;
+  margin: 2.5rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.flash {
+  background-color: white;
+}
